@@ -1,8 +1,5 @@
 #include "resource_dir.h"
-#include "raymath.h"
 #include "Settings.h"
-#include "fun.h"
-#include "Timer.h"
 #include "Player.h"
 #include "Laser.h"
 #include "Meteor.h"
@@ -29,7 +26,7 @@ typedef struct Game {
 	bool debug;
 	
 	Game():
-	player(LoadModel("models/ship.glb")), 
+	player(LoadModel("models/ship.glb")),
 	camera(),
 	lasers(),
 	MeteorTexs(),
@@ -77,7 +74,7 @@ int main() {
     SetConfigFlags(FLAG_WINDOW_HIGHDPI | FLAG_WINDOW_RESIZABLE);
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "3D Galaga");
     InitAudioDevice();
-    SearchAndSetResourceDir("resources");
+    SearchAndSetResourceDir("assets");
 
     Game game;
 
